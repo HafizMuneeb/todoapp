@@ -1,0 +1,52 @@
+body{
+  zoom: 175%;
+  background-color: whitesmoke;
+}
+h1{
+  color: #ef4444;
+  font-style: italic;
+  font-weight: inherit;
+  text-align: center;
+}
+main{
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #0003, 0 25px 50px #0000001a; 
+}
+main >*{
+  padding: 8px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  gap: 8px
+}
+span,
+input:not([type="checkbox"])
+{
+  flex-grow: 1;
+
+}
+input.checked + span {
+  text-decoration: line-through;
+}
+.btnn{
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: whitesmoke;
+}
+
+.btn{
+  background-color: none;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid black;
+}
+.btn-1{
+  background-color: aqua;
+  color: gray;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}

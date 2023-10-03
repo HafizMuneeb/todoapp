@@ -8,7 +8,10 @@ const api = remultNextApp({
     entities: [Task],
     controllers:[TaskController],
     dataProvider:createPostgresDataProvider({
-        connectionString: process.env["DATABASE_URL"]
+        connectionString:process.env["POSTGRES_URL"] || process.env["DATABASE_URL"],
+        configuration: {
+            ssl: Boolean(process.env["POSTGRES_URL"]),
+        },
     }),
     getUser: getUserOnServer,
 })
